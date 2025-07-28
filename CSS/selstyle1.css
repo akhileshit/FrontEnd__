@@ -1,0 +1,28 @@
+input[type="text"] { /*attribute selector*/
+    color: rgb(16, 235, 16);
+}
+
+div ~ p { /*general sibling selector*/
+    color: red;
+}
+
+#b1 { /*id selector*/
+    border: 3px solid red;
+    background-color: black;
+    color: red;
+    cursor: pointer;
+}
+
+#b1:hover { /*:hover pseudo-class*/
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+#ip1:focus { /*:focus pseudo-class*/
+    background-color: gray;
+}
+
+h2 > pre:hover {
+    opacity: 0.5;
+}

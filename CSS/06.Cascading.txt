@@ -1,0 +1,208 @@
+05/11/24 & 06/11/24 No class..
+
+07/11/2024
+
+Grids in CSS:
+
+- Way to arrange elements on a webpage in rows and columns.
+- CSS Grid is a powerful layout tool that simplifies web design, making it easier to build beautiful, responsive, and well-structured websites. It’s the perfect solution for anyone looking to create modern layouts without the frustration of older CSS methods!
+- Use it when you need both horizontal and vertical control!
+- display: grid;  to activate grid
+- right-click - inspect - div - press-grid-button to visualize the grid
+- similar to flexbox, grids are also applied to the 'items' inside a 'container'
+
+Grid properties:
+- display:grid;
+- grid-template-rows          to specify #rows & its sizes      [give in pixels "100px 100px 100px"  (or)  "repeat(3, 100px)"  (or)  in fractions 1fr 1fr 1fr  (or)  minmax(100px, 3fr)  (or)  mixmatch (or) auto]
+- grid-template-columns
+- grid-auto-columns          if cells exceeds in the grid automatically adds extra 'columns' with 'specified size'
+- grid-auto-rows              
+- grid-auto-flow            if cells exceeds in the grid automatically add what? ---> you specify 'row'/'column'
+- grid-row-start              specify the start 'row' index('line#' +ve/-ve) from where any item starts
+- grid-row-end
+- grid-column-start
+- grid-column-end
+- grid-row               specify row-start & row-end in single property    [like 2/5]
+- grid-column
+- grid-area                specify row-start, column-start, row-end & column-end in single property    [like  2/2/3/5]. it is also overloaded property when u have 'grid-template-area' defined
+- grid-template-areas               specify your own area with your own names. and add 'gird-area' for each items seperately
+- z-index                1 item over or underneath another   0 default for all.  higher the value higher the 'over'
+
+
+- You just have to know which of these properties will be applied on 'single items' inside grid AND properties applied on 'whole grid container'.
+- like properties with 'templates',auto-clolumns, auto-flow are applied on whole container.
+
+- Yes grid is flexible and responsive to diff screen sizes. BUT ONLY WHEN you specify sizes in fractions or relative to other elements and not using fixed sizes (common sense)
+- you have to use sizes in 'fractions(1fr 3fr 1fr)' if you want your grid to resize automatically according to the screen size.
+
+FlexBox or Grid ?
+- Use flexbox for aligning items in single directions.   navbars, buttons, forms
+- Use gird for creating full page layouts using both directions rows and columns.    page layouts, dashboards, gallaries
+
+
+
+
+-Code - grid.html, grid.css 
+      - grid1.html, grid1.css  
+
+=======================================================================================================================================
+
+08/11/2024 
+
+Some more Grid properties :
+- justify-items         aligns the 'grid-items' horizintally which is inside 1 grid cell!! (applies justify-self for all items!)       [stretch, center, start, end]
+- align-items          aligns the 'gird-items' vertically which is inside 1 grid cell!! (applies align-self for all items!)         [stretch, center, start, end]  
+- justify-self          align horizontally for 'single item'            [same as justify-items]
+- align-self          align vertically for 'single item'              [same as align-items]
+- justify-content          aligns the 'grid' horizintally which is inside the grid-container                [start, end, center, space-between, space-around, space-evenly]
+- align-content          aligns the 'grid' vertically which is inside the grid-container             [start, end, center, space-between, space-around]
+
+-grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))      auto-fit with minmax(with fraction) combined makes the grid items auto fit to the screen width! (like media queries)
+
+
+Some more CSS properties:
+- border
+- border-top
+- border-bottom
+- border-left
+- border-right
+- border-radius
+- border-top-left-radius !!
+- border-top-right-radius 
+- border-bottom-left-radius 
+- border-bottom-right-radius 
+- box-shadow : offset-x(x-axis) offset-y blurness spredness color
+     -blurness and spreadness optional
+     -offsetx or y -ve values means right and top shadows respectively
+
+------------------
+
+Media Queries in CSS :
+
+- For Responsive design for different devices with different screen widths.
+- use meta tag    <meta name="viewport" content="width=device-width, initial-scale=1.0">    inside <head> tag
+- The viewport meta tag helps make webpages responsive by controlling how they are displayed and scaled on various devices, such as smartphones, tablets, and desktops. 
+      - name="viewport"    Targets the visible area of the screen.
+      - width=device-width    Makes sure the content fits the screen's width.
+      - initial-scale=1.0    Ensures the page is shown in normal size, without zooming in or out.
+
+@media (max-width: 1024px) {   // Typical Desktop screen width
+      p1 {
+            // css code
+      }
+}
+
+- similarly 768px for Tablets and 480px for mobile devices (Typical.)
+
+--------------------
+
+Semantic HTML :
+They just tell the meaning of the sections of html code & is super useful!.
+Semantic HTML is the practice of using HTML elements that " convey " the purpose or "meaning of content", rather than focusing solely on visual presentation. These elements help define the structure and hierarchy of content on a webpage, making it easier for both browsers and assistive technologies to interpret. While CSS handles the presentation of a webpage, Semantic HTML organizes content meaningfully.
+
+- Before this we were using "only div's" for different sections. And was difficult to find and edit the html code!
+- non-semantic elements commomly used: <div> , <span>
+- Search engines use semantic elements to better understand the content organization  (SEO!)
+
+Semantic Elements: 
+- <header>
+- <nav>
+- <main>
+- <section>
+- <article>
+- <aside>
+- <footer>
+- <figure>
+- <time>
+
+
+Assignment: Exact Facebook Login page
+
+
+
+
+-Code - grid2.html, grid2.css 
+      - grid3.html, grid3.css 
+      - mediaQueries.html, mediaQueries.css 
+
+      
+=======================================================================================================================================
+
+11/11/2024 
+
+CSS Transformations :
+Think of transformations as your way to move, resize, spin, or slant elements on a webpage. With just a few lines of CSS, you can make your page look alive and interactive.
+
+Transformations properties :
+below are the values for "transform" property:
+- translate()         moves element to a new position    [px/%, px/%]
+- scale()           resizes the element(bigger or smaller)    [like floating-pt no., px...]
+- rotate()           spins the element at an angle.    [deg/turn, deg/turn]
+- skew()          slants the element for a stretched effect.     [deg, deg] 
+- transform-origin()            sets the starting point of the transformation (default is center)   [like top , top left ...]
+
+
+- we have translatex(), y, z variations of translate() . 
+- similarly for scale() , rotate() , and x,y for skew().
+- They all can take -ve parameters also.  translate() for left and up, scale() for reverse&resize, rotate() anti-clockwise..
+- we can combine these properties like    transform: translate(20px, 0) scale(1.5);
+
+
+
+
+-Code - transformations.html, transformatios.css 
+
+      
+=======================================================================================================================================
+
+12/11/2024 
+
+CSS Animations :
+
+CSS animations are effects applied to HTML elements that allow them to "move, change color, resize, fade, rotate" with time!!, and more—without needing JavaScript. This feature brings motion and personality to static elements, transforming your website from simple to stunning with just a few lines of CSS code.
+
+Two main concepts that makes css animations possible:
+- @keyframes anime_name { }  ------>    It defines the animation (tells how the element shd look @ different points.). Single definition for all Browsers.
+      -Use 0% to 100%  (or) 'from' & 'to' keywords to specify beginning and end
+- 'animation' property -------->   This property "binds" defined animations with selectors
+
+- @keyframes and animation property are written seperately, where inside keyframes we define the unique animation (like functions in java) & "animation" property is written as a property for particular selector.
+
+CSS Animations properties :
+- animation
+- opacity
+
+
+'animation' property short-hand for:
+- animation-name                                                        [any name]
+- animation-duration            duration to complete one cycle          [in sec]
+- animation-timing-function         controls the speed of animation     [keywords like ease, ease-in, ease-in-out, linear, step-start,... and func like linear(), steps(), cubic-bezier()] see mdn
+- animation-delay             initial delay before animation starts     [in sec]
+- animation-iteration-count                                             [1,2,3..,infinity]
+- animation-direction        specifies if animation shd change direction specified.  [normal, alternate, reverse]
+- animation-fill-mode         [forwards, backwards, both]   forwards keeps final animation state after it completes
+- animation-play-state      [running or paused]
+- animation-timeline
+
+
+- These are the properties/tools to create Animations
+- The extent only depends on your creativity!!..
+
+
+Some more CSS properties:
+- position       [static [default], relative, absolute, fixed]  left, right, top.. don't work in static.
+- background-image    [url(xyz.png)]    image repeats untill filling the screen!
+- background-repeat   [repeat, no-repeat]
+- background-attachment   [fixed]
+- background-size       [cover, auto, contain]  
+- background       [linear-gradient(green, blue,..), radial-gradient(blue, yellow,..)]
+Any background properties when applied to <body> it will repeat to fill screen by default.. so adjust it using above properties (see jdsf.html,jdsf.css)
+
+
+
+
+-Code - animations.html, animations.css 
+
+
+
+13/11/2024 No Class

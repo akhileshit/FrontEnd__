@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+}
+.item {
+    background-color: lightblue;
+    width: 150px;
+    height: 150px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+
+    border: 5px solid red;
+}
+

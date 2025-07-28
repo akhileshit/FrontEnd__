@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+*::selection {
+    background-color: green;
+    color: white;
+}
+
+.green_earth {
+    height: 100vh;
+}
+
+.welcome, .login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+    font-size: 25px;
+    margin-top: -40px;
+    font-family: Verdana;
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 0%;
+}
+
+.sign, #username, #pwd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 15px;
+    width: 120px;
+    font-family: verdana;
+    font-weight: bold;
+    font-size: large;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(152, 54, 54);
+    transition: none;
+    color: white;
+}
+.b2 {
+    background-color:rgb(24, 197, 24) ;
+    color: white;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: verdana;
+    font-size: large;
+    font-weight: bold;
+}
+
+#gallaries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
+    position: absolute;
+    /* width: 50%; */
+    top: 13%;
+    left: 40%;
+}
+
+.infobtn {
+    border-radius: 5px;
+    padding: 25px;
+    width: 350px;
+    font-family: verdana;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.infobtn:hover {
+    cursor: pointer;
+    background-color: rgb(152, 54, 54);
+    transition: none;
+    color: white;
+}
+
+video {
+    height: 300px;
+    width: 400px;
+    border: 5px solid green;
+    border-radius: 25px;
+}
+
+.videos, .images {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 100px;
+    /* height: 100vh; */
+    /* width: 100%; */
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    font-family: verdana;
+    font-size: 50px;
+}
+
+.img {
+    height: 300px;
+    width: 400px;
+    border: 5px solid green;
+    border-radius: 5px;
+}
+
+.img:hover {
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+}

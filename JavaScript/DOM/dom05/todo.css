@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr;
+    grid-template-areas: 
+    'heading heading'
+    'adding adding'
+    'pending completed';
+}
+
+#heading {
+    grid-area: heading;
+    justify-self: center;
+}
+
+#adding {
+    grid-area: adding;
+    justify-self: center;
+}
+
+#pending {
+    grid-area: pending;
+    justify-self: center;
+}
+
+#completed {
+    grid-area: completed;
+    justify-self: center;
+}
+

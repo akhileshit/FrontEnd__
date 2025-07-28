@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+button {
+    padding: 20px;
+    width: 100px;
+
+}
+
+.active {
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        
+        <form action="#">
+            <table cellpadding="10" border>
+                <tr>
+                    <td> <label for="name">Name : </label></td>
+                    <td> <input type="text" id="name" name="un" size="25" placeholder="Firstname" title="Enter name in the given format" autofocus pattern="^[A-Z][a-z]*$"> <br></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age : </label> </td>
+                    <td> <input type="number" id="age" name="ua" min="18" max="35" step="2" placeholder="Enter your age in years" title="Enter your age in years" > <br></td>
+                </tr>
+                <tr>
+                    <td> <label>Password : </label></td>
+                    <td> <input type="password" name="up" placeholder="Enter the password" title="Password must be 6 characters long"/> </td>
+                </tr>
+                <tr>
+                    <td>  <label>Email : </label></td>
+                    <td> <input type="email" name="ue" placeholder="Enter your email" /> </td>
+                </tr>
+                <tr>
+                    <td>  <label>DOB : </label></td>
+                    <td><input type="date" name="udb"  > </td>
+                </tr>
+                <tr>
+                    <td>  <label>Week : </label></td>
+                    <td> <input type="week" name="uw"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Time : </label> </td>
+                    <td> <input type="time" name="ut"> </td>
+                </tr>
+                <tr>
+                    <td> <label>Time : </label></td>
+                    <td> <input type="datetime-local" name="utd"> </td>
+                </tr>
+                <tr>
+                    <td>  <label>Color : </label></td>
+                    <td> <input type="color" name="uc"> <br></td>
+                </tr>
+                <tr>
+                    <td>  <label>Select Range : </label></td>
+                    <td> <input type="range" name="ur"> <br></td>
+                </tr>
+                <tr>
+                    <td> <label>Search : </label></td>
+                    <td> <input type="search" name="us" placeholder="Search here"> <br></td>
+                </tr>
+                <tr>
+                    <td> <label>Upload File : </label></td>
+                    <td> <input type="file" name="uf" accept="image/png "> <br></td>
+                </tr>
+                <tr>
+                    <td> <label>TelePhone : </label></td>
+                    <td> <input type="tel" name="ut" placeholder="Enter your phone number"> <br></td>
+                </tr>
+                <tr>
+                    <td> <label>Url : </label></td>
+                    <td> <input type="url" name="uu" placeholder="https://"> <br></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <input type="submit" > </td>
+                </tr>
+            </table>
+
+ 
+            
+        </form>
+
+
+    </body>
+</html>
+
+<!-- give proper names for "name" attribute, since it is sent to the server with data attached to it -->

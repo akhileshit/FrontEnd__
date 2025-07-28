@@ -1,0 +1,151 @@
+08/10/2024 
+
+<table> tag :
+- For creating tables
+- <table border> <tr>  <th colspan="2">NAME</th> <td rowspan="3">Aa</td>  </tr> </table>
+- Inside table we have rows(<tr>- table rows). 
+- Inside rows we have
+     column header(<th>- table header cell) (Bold)
+                 or
+     column data(<td>- table data) 
+
+- <tr> acts as rows
+- <td> or <th> acts as columns and cell data!!
+     Use <th> for column name (bold)
+     Use <td> for normal cell data
+
+ attributes:
+- <table> attribute like "border." to put all borders, "cellpadding", "cellspacing", maybe more
+- <th> or <td> attribute like "colspan" and "rowspan" , tells #rows to span and #columns to span respctively.
+
+*Remember: a table-data or table-header can have images, videos, anything. Not only Text.
+
+
+-Code - tables.html 
+
+=======================================================================================================================================
+
+09/10/2024 
+
+Lists :
+ - ordered Lists - <ol>
+ - unordered Lists - <ul>
+ - definition Lists - <dl>
+ - (list nesting)
+
+<ul> <li></li> </ul>
+<ol> <li></li> </ol>
+<dl> <dt><dd></dd></dt> <dl>
+
+- use  <li>(list-item) tags inside <ol> or <ul> 
+- but Use definition-term<dt> and definition-description<dd> tags inside <dl>(definition list)
+
+- not only text inside list<li>, can be links , multimedia etc...
+
+
+-Code - lists.html
+
+=======================================================================================================================================
+
+10/10/2024 
+
+Forms <form> tag :               "Interactive Web-Pages"
+
+- like a gateway for 'users' to provide information like signing up, searching or completing a transaction
+- hence makes websites dynamic and interactive
+- Inside form-tag we have 3 elements normally: (form elements)
+     -label &
+     -mechanism to accept input (input)     -typed input
+     -buttons                             -clicked input
+
+- <form> attribute "action"
+- <input /> tag to accept data from the user.
+- <input> tag attributes like - "type"(mandatory), "name", "autofocus.", "placeholder", "required.", "size", "max"-"min"-"step" attributes for number type(with SPIN CONTROL) and many more......
+- "type" attribute values like - 'text', 'number', 'submit', 'reset'
+- "name" attribute crutial while form submission since it associates value given by user with it (un=JohnDoe) (u can see that in the url while submitting!!)
+- <label> tag attribute "for"(optional) to specify 'name or id' of "input" element it belongs to
+
+note: the . placed by 'me' after attribute names is to make understand that no value needed to that attribute ! (like singleton attribute!!) i named it
+
+
+important: (not told yet)
+- forms should validate data provided by the users before submitting
+- forms should secure user data using https or server-side validation
+
+
+-Code - forms.html
+
+
+=======================================================================================================================================
+
+14/10/2024 
+
+
+Remember: HTML IS BROWSER DEPENDENT (not all elements and its attributes work in the same way..)
+
+some more attributes for <input /> tag:
+- "pattern" attribute to accept particular format of input from the user. Ex: pattern="^[A-Z][a-z]*$"  (Start with capital letter and end with any #lower-case-letter)
+- "accept" attribute especially for input type like 'file'. Ex: accept="image/png" or "text/pdf" so on....  accept=".jpg, .png, .pdf" (multiple)
+- "maxlength" attribute to restrict input to certain #characters.
+- "size" to adjust width of the input box (Only applicable to some input types. not all)
+- "id"
+- "title" attribute to show text when hovered on box (like showing user- password shd be 6 char long)
+
+- more attributes summary: "pattern", "accept", "maxlength", "size", "id", "title"
+
+
+some more <input /> types (form elements):
+- text
+- number
+- password
+- email (default expectation/pattern is @ shd be present followed by some characters)
+- date
+- week
+- time
+- datetime-local
+- color
+- range (maybe visible differently in diff browsers)
+- search
+- file
+- tel (maybe deprecated)
+- url
+- submit
+- reset
+
+
+- Wrote a Assignment code to show all these 'form elements' and align it using 'table' element using html
+
+
+-Code - forms1.html
+
+
+=======================================================================================================================================
+
+15/10/2024 
+
+
+some more <input /> 'types' (form elements):
+- radio    (choose only 1 option)
+- checkbox    (choose multiple options)
+- button
+
+- Usually radio type will have multiple options to choose from
+- For radio type to work, 'same name' should be given to all the options  (logically makes sense), otherwise all the options will be selectable !!!! (which is contradictory to radio button) 
+- In (checkbox, radio and range) <input /> types, "value" attribute acts as the value to sent to the server(request-string) with "name". Ex: if value="hi" then 'name=hi' is sent in request string
+- "checked" attribute for default check option
+- if "value" attribute not specified in 'radio' and 'checkbox' type , no value is sent in the request string!!! . So specify values
+- In 'button' <input /> type,  attribute "value" acts 'differently'. It gives button-name inside button!!
+- 'range' type in input tag also has attributes like "min", "max", "value"... (value also acts as default value b/w min and max)
+- in 'text' input type "value" acts as DEFAULT text 
+
+
+- more attributes summary: "value", "checked."
+
+- button - another type for input tag. Functionality to this given using js or other languages
+- if "value" not specified to it, button looks small w/o any name on it. So give value
+
+- we also have <button> tag itself (still not seen)
+
+
+
+-Code - forms2.html

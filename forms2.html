@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Forms
+        </title>
+    </head>
+    <body>
+        <h2>Hero Registration Page</h2>
+
+        <form action="">
+
+            <label for="name">Name: </label> <input type="text" name="name" required autofocus> <br><br>
+            <label for="age">Age: </label> <input type="number" name="age" required > <br><br>
+    
+            <label for="gender">Gender: </label>            <!--Radio-->
+            <!-- Another method for writing label and input tags -->
+            <label for="gender">
+                <input type="radio" name="gender" value="male" required>MALE
+            </label>
+            <label for="gender">
+                <input type="radio" name="gender" value="female">FEMALE
+            </label>
+            <label for="gender">
+                <input type="radio" name="gender" value="other">OTHER
+            </label>
+            <br>
+            <br>
+    
+            <label>Preferred Heroins :</label> <br>          <!--Checkbox-->
+            <input type="checkbox" name="heroin1" value="Priyanka" checked> <label for="heroin1">Priyanka</label> <br>
+            <input type="checkbox" name="heroin2" value="Katreena"> <label for="heroin2">Katreena</label> <br>
+            <input type="checkbox" name="heroin3" value="Deepika"> <label for="heroin3">Deepika</label> <br>
+            <input type="checkbox" name="heroin4" value="Tamanna"> <label for="heroin4">Tamanna</label> <br>
+            <br>
+            
+            <label for="price">Price Range: </label> <input type="range" name="price" min="100" max="1000" value="600" oninput="this.nextElementSibling.value = this.value"> <output>600</output> <br><br>  <!--Range-->
+            <label for="upload">Upload Resume: </label> <input type="file" name="upload" accept=".jpg, .png, .pdf"> <br><br> <!--File-->
+            
+            <input type="submit">
+            <input type="button" value="CLICK HERE AND ITS A DUMMY BUTTON"> <!--Button-->
+            <!-- <button>hello</button> <button type="button">hey</button> -->
+            
+        </form>
+
+    </body>
+</html>
+
+
+<!-- oninput="this.nextElementSibling.value = this.value"> <output>600</output> -->
+ <!-- This part is javascript within html, which i researched just to know the value of slider while sliding -->

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tables</title>
+    </head>
+
+    <body>
+        <table border cellpadding="35" cellspacing="1"> <!--Normal Table with borders--> <!--remove cellpad and cellspace and see-->
+
+            <!-- column heading -->
+            <tr>
+                <th>NAME</th> <!-- 1st column-->
+                <th>AGE</th> <!-- 2nd column-->
+            </tr>
+
+            <!-- 1st row  -->
+            <tr>
+                <td>Akhilesh</td>
+                <td>24</td>
+            </tr>
+
+            <!-- 2nd row  -->
+            <tr>
+                <td>Ramya</td>
+                <td>27</td>
+            </tr>
+
+        </table>
+        <br/>
+        <p>===============================================================================</p>
+        <br/>
+        
+        <table border> <!--Table to show column spanning-->
+            
+            <!-- row acting as main table name  -->
+            <tr>
+                <th colspan="2">STUDENT DETAILS</th>
+            </tr>
+            
+            <!-- row acting as column_names  -->
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+            </tr>
+            
+            <!-- 1st row  -->
+            <tr>
+                <td>Ramesh</td>
+                <td>25</td>
+            </tr>
+            
+            <!-- 2nd row  -->
+            <tr>
+                <td>Manohar</td>
+                <td>25</td>
+            </tr>
+    <!--    .
+            .
+            .  --> 
+        </table>
+        <br/>
+        <p>===============================================================================</p>
+        <br/>
+        
+        <table border> <!--Table to show row spanning-->
+            
+            <tr>
+                <th rowspan="2">EMPLOYEE</th>
+                <th>NAME</th>
+                <td>Ramesh</td>
+                <td>Mahantesh</td>
+        <!--    .
+                .
+                .  --> 
+            </tr>
+            
+            <tr>
+                <th>SALARY</th>
+                <td>100000</td>
+                <td>100000</td>
+        <!--    .
+                .
+                .  --> 
+            </tr>
+        
+            
+        </table>
+
+        <!-- Miscelleneous -->
+        <br>
+        <br>
+        <br>
+        <table border="1">
+            <tr>
+              <td rowspan="2" colspan="2">Rowspan 2, Colspan 2</td>
+              <td>Cell 1</td>
+            </tr>
+            <tr>
+              <td>Cell 2</td>
+            </tr>
+            <tr>
+              <td>Cell 3</td>
+              <td>Cell 4</td>
+            </tr>
+          </table>
+
+    </body>
+</html>

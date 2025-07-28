@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: rgb(21, 145, 21);
+    color: white;
+    border-radius: 5px;
+    margin: 80px auto;
+    width: 200px;
+    text-align: center;
+    padding: 25px;
+}
+
+.box1:hover {
+    transform: translate(100px, 0);
+    /* transform: translatex(20px); */
+    /* transform: translatey(20px); */
+    /* transform: translatez(20px); */
+}
+.box1 {
+    margin-top: 2px;
+}
+
+.box2:hover {
+    transform: scale(1.2);
+    /* transform: scalex(1.2); */
+    /* transform: scaley(1.2); */
+    /* transform: scalez(1.2); */
+}
+
+.box3:hover {
+    transform: rotate(25deg);
+    /* transform: rotatex(25deg); */
+    /* transform: rotatey(45deg) ; */
+    /* transform: rotatez(25deg); */
+}
+
+.box4:hover {
+    transform: skew(10deg, 10deg);
+    /* transform: skewx(10deg); */
+    /* transform: skewy(10deg); */
+}
+
+.box5:hover {
+    transform-origin: top left;
+    transform: rotate(40deg);
+}
+

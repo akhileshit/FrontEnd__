@@ -1,0 +1,221 @@
+16/10/2024 
+
+REGULAR EXPRESSIONS FOR PATTERN ATTRIBUTE:
+    1. ^ (Caret) 
+    Usage: Anchors the pattern at the beginning of the input. 
+    Example: ^a matches any string that starts with the letter 'a'. 
+    Explanation: The caret symbol ensures that the pattern starts from the beginning of the string. 
+    2. $ (Dollar) 
+    Usage: Anchors the pattern at the end of the input. 
+    Example: b$ matches any string that ends with the letter 'b'. 
+    Explanation: The dollar sign ensures that the pattern must end at the end of the string. 
+    3. . (Dot) 
+    Usage: Matches any single character except newline characters. 
+    Example: a.b matches 'a' followed by any character, followed by 'b' (like 'a*b', 'a2b', etc.). 
+    Explanation: The dot matches any one character, acting as a wildcard. 
+    4. * (Asterisk) 
+    Usage: Matches zero or more occurrences of the preceding element. 
+    Example: ab matches 'a', 'ab', 'abb', 'abbb', and so on. 
+    Explanation: The asterisk allows the previous character or group to repeat zero or more times. 
+    5. + (Plus) 
+    Usage: Matches one or more occurrences of the preceding element. 
+    Example: ab+ matches 'ab', 'abb', 'abbb', but not 'a'. 
+    Explanation: The plus symbol ensures that the preceding element must appear at least once. 
+    6. ? (Question Mark) 
+    Usage: Matches zero or one occurrence of the preceding element. 
+    Example: ab? matches 'a' and 'ab', but not 'abb'. 
+    Explanation: The question mark makes the preceding element optional.
+    7. [] (Square Brackets) 
+    Usage: Defines a character set, matching any one of the characters inside the brackets. 
+    Example: [abc@] matches 'a', 'b', '@', or 'c'.    [a-z]-->any lowercase from a to z (range)
+    Explanation: Square brackets allow you to specify a range of characters to match. 
+    8. | (Pipe) 
+    Usage: Acts as a logical OR. 
+    Example: alb matches either 'a' or 'b'. 
+    Explanation: The pipe is used to separate alternative patterns, matching either one or the other. 
+    9. () (Parentheses) 
+    Usage: Groups expressions together and treats them as a single unit. 
+    Example: (ab)+ matches 'ab', 'abab', 'ababab', etc. 
+    Explanation: Parentheses are used to group parts of the regular expression and apply quantifiers like, +, or? to the group. 
+    10. \d 
+    Usage: Matches any digit (0-9). 
+    Example: \d{2} matches any two digits. 
+    Explanation: The \d is a shorthand for any digit. 
+    11. \w
+    Usage: Matches any alphanumeric character (A-Z, a-z, 0-9, including underscore). 
+    Example: \w+ matches one or more word characters. 
+    Explanation: The \w matches any letter, digit, or underscore. 
+    12. \s 
+    Usage: Matches any whitespace character (spaces, tabs, etc.). 
+    Example: a\s+b matches 'a' followed by one or more spaces, followed by 'b'. 
+    Explanation: The Is is a shorthand for whitespace characters. 
+    13. {} (Curly Braces) 
+    Usage: Specifies a quantifier for the number of times an element must appear. 
+    Example: a{2} matches exactly two 'a's (like 'aa'). a{1,50} implies 1 to 50 a's , a{5,} implies mininmum 5a's and above
+    Explanation: Curly braces are used to specify an exact number or a range of repetitions.
+
+
+- These above regex symbols useful for creating a format for inputs like passwords, email, name, phoneno. etc., specified using "pattern" attribute
+
+- pattern=".{8}" weak password
+- pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$&*?%])[A-Za-z\d!@#$%&*?]{12,}$" (Strong Password format)
+- .*[A-Z] means atleast one Uppercase
+- ?= just checks if the specified condition exists in the given input. and do not consume any characters(Just checking)
+- Hence here only [A-Za-z\d!@#$%&*?]{12,} is the format and others are conditions!!!!
+
+- No need to specify ^(start) and $(end) in html. (html(using js) by default STRICTLY checks the whole input given as pswd, to follow the format)
+- means after matching all conditions, you cannot put any other characters like(_, ^, ...) which is not specified in the format to make it min 12 characters (understood?) gpt ans
+- in other words, whole input should strictly abide to the format and characters specified Only. (no extra things after qualifying)
+
+
+
+Some more form elements !!!
+- <select> <option></option> </select>    (works as Dropdown or multiple select)
+- <select> attribute like "multiple" , makes multiple selects
+
+- <textarea></textarea>     (for address, comments, feedback..)
+- <textarea> attributes like "cols"(width) , "rows"(height) 
+
+- <fieldset> <legend></legend> <label></label> </fieldset>   -to group related elements within the form    (not input type but just for presentation)
+- <legend> provides caption to the <fieldset>
+
+
+
+-Code - forms3.html
+
+=======================================================================================================================================
+
+17/10/2024 
+
+- Wrote a html-code to create portfolio websites(kod-app)
+
+                    ***********************************END OF HTML**************************************
+*** Remember : HTML not completely ended. Some more HTML elements we can only understand with JavaScript or CSS will be learnt during js/css!!!!
+
+
+                                                CASCADING STYLE SHEET (CSS)
+
+
+- Created by Hakon wiun lie in 1996. Friend of Tim Burners lee 
+- CSS cannot exist without HTML
+- Like how we style our body parts by choosing one-by-one, we hv to style even html using 'selectors'!!
+- Hence it should be embedded with html. It can be done in 3 different ways:
+    - Inline CSS 
+    - Internal CSS
+    - External CSS
+
+- Inline CSS: inside an element tag to which we need style using "style" attribute
+- Internal CSS written inside <head> tag after <title> tag and inside '<style>' tag using selector(element, id and class selectors)
+- External CSS in different file named .css using selector(element, id and class selectors)
+    > Specify <link /> of the .css file inside .html after <title> tag inside <link href="xyz.css" rel="stylesheet" type="text/css" />
+    > "href" attribute to specify .css file
+    > "rel" attribute to specify the relation to html
+    > "type" attribute to specify the type of data the style file contains
+
+- both internal and external css are written same way like this:
+              selector <------------p { ------------------> declaration block
+                                        color:blue; ------> declaration
+                                        font-family: sans serif;
+                    property   <--------border: black solid -------> value
+                                    }
+
+- inline CSS:
+    > ex: <p style="color: yellow; font-size: 18px;">This is a yellow paragraph.</p>
+    > this is different type of writing an attributes-value. 
+    > ":" b/w 'property' and its 'value'
+    > ";" to separate 2 'declarations'
+
+
+
+-Code - no code
+
+=======================================================================================================================================
+
+18/10/2024 
+
+Which is Better?
+- inline or external or internal css
+- External css is much better in terms of:
+    > keeping styling seperately in a file(better redability)
+    > Security/privacy to css code written(no one else can see/copy the css) - it's a creativity skill to design excellent good looking websites
+    > No redundant code unlike inline CSS
+
+
+Different styling attributes/properties of CSS:
+- color  (can give any one of color-name/rgb-value/hexadecimal-value/hsl-value)
+- background-color
+- font-family
+- font-weight   (boldness)
+- font-size
+- font-style
+- border   (dotted, dashed, solid)
+- text-align
+- 
+
+
+Priorities:
+1. inline CSS
+2. internal CSS
+3. external CSS
+
+
+
+-Code - no code
+
+=======================================================================================================================================
+
+21/10/2024 
+
+CSS Selectors: To target the specific html elements to apply styling (10 types)
+
+- Universal selector (*)
+- class selector (.)     (select 'all' elements with specific class)
+- id selector (#)     (select 'single' element with specific id)
+- element selector ()
+- group selector (,)        (to apply same style to multiple elements)
+- adjacent sibling selector (+)      (h2 + p --> '1st' p that comes directly after h2 ('whereever'))
+- general sibling selector (~)         not seen
+- child selector (>)          (div > p --> selects 'all' p's which are direct childern of div)
+- descendent selector     (div p --> selects 'all' p's under div, all descendents literally)
+- attribute selector              not seen
+
+
+Multiple class names!!!!
+- till now we were writing one class name per element. what if we can have multiple class names for a single element!!!!!!
+- <p class="green bold italic"> Crazy right?? and very useful
+- .green {              .bold {
+    color: green ;          font-weight: bold ;
+  }                     }
+- This enables us to mix and match CSS classes to create many unique styles without writing a custom class for every style combination needed!!!!
+
+
+
+-Code - selectors.html, selstyle.css
+
+=======================================================================================================================================
+
+22/10/2024 
+
+- attribute selector    (input[type="text"] --> selects 'all' input elements with attribute type="text")
+- general sibling selector (~)    (div ~ p ---> selects 'all' p's literally that follows(not under) div   ella thammandiru)
+
+
+Pseudo-Classes in CSS :
+- They allow you to apply styles to elements based on their state or position within the document. These states can be influenced by user interactions, like 'hovering' or 'focusing' on elements, or by their 'placement' in relation to other elements.
+
+- :hover{ } --> when hovered on the element with id b1 what sytle it shd change to.   Ex: #b1:hover {}
+- :focus{ } ---> when focused(clicked) on the element with id ip what style it shd change to.   Ex; #ip:focus {}
+
+
+Some more properties of CSS:
+- opacity    (0.5)
+- cursor   (pointer)
+- text-transition   (uppercase,lowercase) for texts
+- list-style-type    (circle)   for lists
+- width       (%)
+- margin
+- padding  
+
+
+
+-Code - selectors1.html, selstyle1.css

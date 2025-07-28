@@ -1,0 +1,3 @@
+[submodule "Dummy"]
+	path = Dummy
+	url = https://github.com/akhileshit/git-dep-chk

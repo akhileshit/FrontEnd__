@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    background-color: gray;
+}
+.item {
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;      /* To adjust content Vertically (more specifically along its CROSS axis!!) */
+    justify-content: center;     /* To adjust content Horizontally (more specifically along its CURRENT axis!!) */
+    gap: 10px;
+    height: 100vh; /*necessary*/
+    flex-wrap: wrap;
+    align-content: center;      /* To apply to the contents with more than 1 line/row */
+    border: 5px solid red;
+
+}
+
+/* Remove wrap to apply */
+.box :nth-child(3) {
+    align-self: center;
+    order: -1;
+}

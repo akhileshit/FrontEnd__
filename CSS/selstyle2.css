@@ -1,0 +1,68 @@
+
+div :nth-child(2) { /*div's 2nd child*/        /*\s and no \s makes a difference (BE CAREFUL!!)*/
+    color:red;
+}
+
+p:nth-of-type(2) { /*p as 2nd child*/            /*\s and no \s makes a difference here*/
+    color:hotpink;
+}
+
+
+
+
+
+p:only-child {  /*Parents with type 'p' as only child (whereever)*/     
+    color: blue;
+}
+
+
+
+
+
+.div1 :last-child {   /* last child of class div1     ///ly we hv first-child*/
+    color:yellowgreen;
+}
+
+
+
+
+
+.div1 :nth-last-child(3) {   /*3rd Child from the bottom*/
+    color:cadetblue;
+}
+
+
+
+
+
+.div4 :not(h1) {   /* select all from .div4 that not match 'h1' */
+    color:orange;
+}
+
+
+
+
+
+a:visited {   /* Visited links property */
+    color:green;
+}
+
+
+
+
+
+button:hover {
+    color: blanchedalmond;
+    background-color: black;
+}
+
+
+
+
+
+button:active {   /* Active =>(Click&hold) */
+    color: red;
+    background-color: yellowgreen;
+}
+
+

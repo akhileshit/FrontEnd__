@@ -1,0 +1,35 @@
+* { /*universal selector*/
+    margin: 0;
+    padding: 0;
+}
+
+h1 { /*element selector*/
+    color: green ;
+    margin: 20px ;
+    text-align: center;
+}
+
+div > p { /*child selector*/
+    color: red ;
+    background-color: burlywood;
+    font-size: xx-large;
+    text-align: center ;
+}
+
+div h2 { /*descendants selector*/
+    color: green ;
+}
+
+.pp1 { /*class selector*/
+    color: red;
+    text-align: center;
+}
+
+pre + pre { /*adjacent sibling selector*/
+    border: 5px dotted gray;
+}
+
+img + pre {
+    color: green;
+    border: 5px solid yellow;
+}

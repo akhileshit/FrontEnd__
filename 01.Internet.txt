@@ -1,0 +1,197 @@
+28/08/2024 and 02/09/2024
+
+- Sir Tim Berners lee Invented a Very Complex and Beautiful software now known as "BROWSER"(Client) and Server as soon as the internet came 	into existence. with some RULES to how to send data, how to send media , files, texts etc. and that rules are the Protocols.
+- That group of Protocols and collection of everything became World-Wide-Web(WWW)(A System of Interlinked Hypertext documents)  and is 	inside 	the Browser.
+- WWW is considered as a giant, Global LIBRARY
+- In short web connects "information stored on various computers across the world", letting you find, share and learn about anything you're 	interested in from anywhere in the world.
+
+like:
+To connect to internet you need - Internet Protocol(IP)
+To send files across network you need - File Transfer Protocol(FTP)
+To send message across network you need - Simple Mail Transfer Protocol(SMTP)
+
+- Before Browsers both sender and receiver has to know the protocols and they themselves has to run the algorithms for let's say SMTP, very 	time consuming sending half-an-hour receiving half-an-hour
+
+NOTE:
+- Read about Tim Berners Lee, James Gosling, Larry Errison(oracle), Hakum Viom Lee
+
+There are 3 types of Clients and 3 types of Servers: (GPT bios)
+1. Web Client s/w(Browser) -------->  Web Server(Tomcat)              using protocols http/https
+2. DB Client s/w(Workbench Sql)---->  DB Server(MySQL, Oracle)        using protocols tcp/ip
+3. App Client s/w(Program) -------->  App Server(Glassfish)           using rest apis, soap, rmi, grpc, websockets
+
+Web Server:  A powerful computer that stores digital information and makes it available over the Internet.
+Web Browser:  A software tool that allows you to access and view information from servers via the Internet.
+
+
+Fun Fact:
+web 1.0 - static pages
+web 2.0 - Emphasize user generated content and Interactivity
+web 3.0 - Now and Evolving in aim of Decentralization using Blockchain and AI
+
+
+==========================================================================================================================================
+
+03/09/2024
+
+-First Consider 3 high-level Components:
+ Web-Client
+ Router
+ Web-Server
+
+Note: Always a running software will be inside RAM.
+
+Web-Server:
+-A machine or device where the server s/w is installed.
+-will be 24/7 connected to the internet, if any request comes it should always serve anytime so.
+-Lets say its address as 192.168.0.1.
+-It has a "RAM" and "Hard Disk" inside it.
+-Lets say RAM has "Web Server Software(Tomcat)" and "DBMS" running inside it. Along with this many other s/w will be running but now we 	are interested in only those two.
+-Inside Tomcat(WSS) we have "Web Container". 
+-Inside which our desired web application will run, here "AMAZON".
+-This Amazon application will have various web pages "html files" to serve the customers(clients) like login.html file, Register.html file, 	productDisplay.html, changePwd.html, .... 
+	Along with that "Java/Go/Python/Node.js/.. lang written code files" to interact with DBMS to Fetch/Add the data to and fro from Hard Disk
+
+- Hard Disk will have the lets say all the data stored like Table for AmazonUsers ,... (All the DATABASE DATA).
+
+Web-Client:
+- A machine or device on which web client s/w(Browser) is installed.
+- Customers Computer(let address be 192.168.1.1) inside which the "browser" is opened and typed https://www.amazon.in 	(https://www.192.168.0.1:8080/homepage.html)-	default page
+
+Router:
+-will have "routing table" to resolve the name to ip-address. DNA|ip
+
+
+Working:
+- user(client) clicks "login" , the address https://www.amazon.in/login.html will be sent to the router by the browser in the form of  	String (RequestString/ QueryString).
+- router will resolve name to ip(https://www.192.168.0.1:8080/login.html) and send that to series of middle routers nearby and finally 	goes to 	the server(192.168.0.1)- inside RAM(100s of s/w running with its own port#'s) - inside particular port#, here 8080(tomcat) - inside web 	container.
+- that web container will know when request comes what to do(code written) it fetches the login.html page by seeing the request and sends 	login.html(with css and js files) by the "same path how it came".
+- there on browser gets code it displays the content and the user will proceed to fill it. 
+- if user sends register data it goes until web container and this gives data to java/Go/python/Node.js/.. code with in-turn gives it to DBMS 	and that stores it in the AmazonUsers table in the hard disk as database. dbms sends back msg to java code saying 1 row affected and 	java code tells it to controller(later will see) and that informs to web container and it sends fetches homepage.html with css and js 	files back to the address it came(192.168.1.1)-client
+- this process continues(request-receive)
+Note: NsLookup is the website where we can see the ip addresses of all domain names.
+
+Note:
+-The code files like .html, .css, .js combined called FRONTEND    (Visible to the users(client)) Enhances UX
+-The code files written in Java/Go/python/Node.js/.. languages along with communication withDBMS and Database makes the BACKEND   (Not visible 	to the user(client))
+
+
+==========================================================================================================================================
+
+04/09/2024
+
+-First of all assume that the data already came from the server or backend. How? that is not our point of interest!
+
+-Imagine if you want to show that data to user in a web page and it is presented to you like marks somewhere on the page, age somewhere on the 	page, name somewhere at the end, i agree button somewhere on the page and a submit button!
+	will it be good?
+	No right..
+	This is where we use HTML - to Structure the content of the page shown to the web user.
+
+-Imagine you have structured the data properly on the page, but it is not visually appealing, and looking boring with black and white texts 	everywhere, u sleep looking at it!!
+	But what if it had fully colored text and a beautiful buttons everywhere?. It will be very intriguing 
+	This is where CSS comes into picture - Beautifully Styled page.
+
+-Imagine you have both Html to structure the data and CSS to style the data. And you fill each data - name, age= -25!, marks = -96, you don't 	check I agree button and you click on Register, but nothing is happening.. literally nothing..!!
+	At some point you'll get frustrated and start banging the mouse without knowing the actual problem.
+
+	The problem here is that you entered wrong data and you didn't agree their terms and conditions!!!
+	But the page is not showing or telling you any signs of error you have made, but when you enter proper data and check i agree your data 	it gets submitted.
+
+	Now here the problem is The User Experience is so bad and Very frustrating.
+
+	But now imagine when you enter the wrong data it and click on Register it will show the error or pop-up showing the error you have made 	like please fill it properly , how will it be? !! . very smooth UX
+	This is where our JAVASCRIPT would come into picture - very good and Smooth UX.
+
+
+HTML : Hyper Text Markup Language
+
+*Programming-Language: Language which is able to process the given input ex: input- 5+3, output- 8
+*Markup-Language: Language which is not able to process/compute the given input but just displays the raw text in a structured way ex: input- 5+	3, output- 5+3  . Hence no need of Compiler(which converts one L to another L).
+
+-HTML uses "Tags" similar to keywords in programming-language.
+-Tags are the mechanism to "instruct the Browser", just like how keywords instructs processor!!
+-Browser only understands Markup language!
+-Our main aim here should be to show our content/data "in the browser", so make understand the browser using markup language(one of it is HTML).
+-Browser Interprets all files with type .html (line by line "rendering"(right word, not compiling or interpreting)).
+
+The Browser page has 3 parts:
+-Tab Head
+-Address Bar
+-Body/document
+
+-Use <title> tag to display content inside Tab Head, but <title> tag stores description/metadata hence <title> is one type of description and 	all descriptions should be stored inside <head> tag
+-Use <body> tag to display content inside Body/document
+
+
+			<!DOCTYPE html>
+			<html> ---------> Root tag
+				<head> ---------> Start of Description
+					<title> First Program </title>
+				</head>
+				<body> ---------> Start of Actual Content
+					Hello World!
+				</body>
+			</html>
+
+
+-<!DOCTYPE html> is to tell the browser the version of html, here it is html5. Different for other versions 1.0, 2.0, 2.0 and 4.0.1
+-Root tag (Here html) tells here is where the html starts.
+
+Want to see the 1st Website?!!!! http://info.cern.ch by Tim Berners Lee in 1990
+
+Note: They told no new version of html will come. all will be added to html5 only!!
+
+
+==========================================================================================================================================
+
+05/09/2024
+
+-An opening-tag along with closing-tag is called "container"
+-The contents b/w a tag open and close called "Content"
+-The Tag along with its contents called "Element" ---->  "<p>here are the contents</p>"      "Html Element"
+
+
+ATTRIBUTES:
+
+Can you edit the content inside the browser?! YES ,BUT IT IS NOT INSPECT!!!!
+Using Attributes
+
+- It is a special word used inside an HTML tag to control the behavior or appearance of an element. wrote within the opening tag of an element.
+- Extra information given to tags.
+- ex: <p contenteditable="true"> We will We will </p>
+
+
+Fun Fact: Content placed outside the body tag also visible inside the browser
+
+
+==========================================================================================================================================
+
+09/09/2024
+
+<pre> </pre> tag to preserve spaces (Preformatted text) in any container like <p> </p>.
+
+research on :
+	<mark> tag
+
+Ans: It highlights the text (yellow).
+
+
+
+
+
+
+
+
+
+// for opening in normal notepad w/o vscode make it full screen and zoom until === occupies width of screen(almost) . u will see formatted texts
+
+
+
+
+
+
+
+
+
+
+

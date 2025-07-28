@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    background-color: darkgrey;
+    height: 80vh;
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));     /* auto-fit & minmax() */
+    grid-template-rows: repeat(2, 100px);
+    /* inspect and decrease the screen width to see the effect */
+}
+
+.item1 {
+    background-color: lightgreen;
+}
+.item2 {
+    background-color: greenyellow;
+}
+.item3 {
+    background-color: green;
+}
+.item4 {
+    background-color: yellowgreen;
+}
+
+
+

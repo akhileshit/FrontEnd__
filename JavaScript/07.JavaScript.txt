@@ -1,0 +1,205 @@
+14/11/2024
+
+*********************************************************JAVASCRIPT**********************************************************************
+JavaScript is a high-level, dynamic language designed to bring interactivity to websites. Think of it as the part of a website that brings “life” to HTML and CSS, allowing users to interact with content and perform actions.
+
+- In mid-1990s internet boomed with 2 browsers
+- In 1995 "Brendan-Eich" developed a scripting language in just 10 days! called "Mocha" ---> became "LiveScript".
+- Collaboration with Sun Microsystems renamed it to "JavaScript".!
+- Java and JavaScript are completely different. Like Gulab and Gulab-Jamun.
+- It 'can' run directly in the browser. Using "JavaScript Engine".
+- It is a   "Scripting-language"    becaz it's designed to perform small, specific tasks in webpage rather creating a whole application.
+- It's an    "Interpreted language".    Browsers read it line by line and excute making it ideal for instant response and smooth interactivity. (no Compilation needed)
+- It's also   "Dynamically typed language"   like python (variables type is decided at runtime depending on data assigned to it)
+- Helps to create Single Page Applications(SPA's) using frameworks like React, vue, Angular.
+
+How to write?
+- Internal javaScript : Written directly within HTML file inside <script> tag in <head> (or) <body> section!
+    For Quick, in-page, good for small scripts but less scalable.
+- External javaScript : Written in Seperate .js file and linked to HTML using just src attribute  <script src="filename.js"></script>
+    For Organized, reusable, ideal for larger projects, and allows for caching benefits.
+
+
+Declaring Variables:
+3 types (can use anyone or Nothing!!!!)
+- let  : a variable that can be changed later
+- const   :  a constant that cannot be  changed
+- var   :   not recommended for new code
+
+Printing Variables to the console:
+- console.log()
+- can use '+' or ','(,+\s)
+- `Hello ${name}`
+
+String Concatenation:
+- Use '+'
+
+
+Note:
+- It is also NOT strictly typed language like python. Semicolon can be ignored.
+- right-click - Inspect - console to see the script output in Browsers.
+- To run JavaScript inside pc install Node. To Run:  "node fileName.js"
+
+
+
+
+-Code - demo.html, demo.js 
+
+      
+=======================================================================================================================================
+
+15/11/2024 
+
+Operators in JS:
+- Arithmetic
+- Assignment
+- Relational/Comparison
+- Logical
+- Ternary/Conditional
+- Boolean
+
+catchy are:
+**, --, ++ 
+==, ===, !=, !==           == (not strict) checks only value!!!       ===(Strict) checks both value & type
+rest are almost normal/same as other lang.
+
+- Nested ternary operator can also be written like this ---->    (a>b ? a : b)>c ? (a>b ? a : b) : c
+
+=========================
+
+Functions in JS:
+Functions are your helpers! Write them well, and they’ll save you time and effort by automating repetitive tasks in your code.
+
+function func_name() {
+
+}
+
+- 4 Types:
+    1. No parameter no return value
+    2. parameter but no return value
+    3. No Parameter but return value
+    4. Parameter and return value
+
+- No need to specify return types 
+- No need to specify any keywords(var,let,const) for parameters (Dynamically Typed Lang).  But its good practice to specify let
+
+
+
+
+-Code - operators.js 
+  
+=======================================================================================================================================
+
+18/11/2024 
+
+There are 3 ways of Functions :
+1. Function Declaration (normal way)
+2. Function Expression
+3. Arrow Functions
+
+*Function Declaration : A most basic way to define a function in JS. 
+- 'Hoisting'   one can call a function even before it is defined in the code.
+
+
+*Function Expression : It defines a function as a part of expression rather than standalone declaration.
+   const add = function (x,y) {
+       return x + y; 
+   }
+- 'Not Hoisted'    we 'cannot' call a function (add(2,3)) before/above the function definition.  (since they act as assignment) cs
+- function_name is optional in Function Expression.
+
+
+*Arrow Function : Provides concise way to write functions.
+    const square = x => x*x        // single parameter with implicit return!  (returns x*x )
+    
+    const add = (a,b) => a+b        // multiple parameter with implicit return  (returns a+b)
+
+    const greet = () => console.log("Hello")        // No parameter with implicit return  (returns Hello)
+
+    const a = () => { }              // Arrow function with multiline code 
+
+- 'Not Hoisted'    (since they act like assignment)  cs
+- Ideal for single expression or quick one-line functions.
+- They do not have their own 'this' context (they say)  (maybe future concept)
+
+==========================================
+
+DATA TYPES IN JS :
+
+typeof() - function to get type.
+
+(we saw)
+- number
+- string 
+- boolean 
+- object    dictionary in python is the object in JS! (apperance exactly same)
+- array (special type of 'object')       list in python is the array in JS!  (apperance exactly same)
+    Array.isArray() disinguishes "Arrays" instead of saying "object"
+
+
+
+
+-Code - functions.js 
+    
+=======================================================================================================================================
+
+19/11/2024 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Code - datatypes.js   (mostly arrays)
+    
+=======================================================================================================================================
+
+20/11/2024 
+
+Control Constructs in JS :
+- Simple if
+- if-else
+- Nested if-else
+- if else-if Ladder
+- switch-case
+
+- for loop
+- while loop
+- do-while loop
+
+- break
+- continue
+(above ALL same as java)
+
+- for..of loop    (for "Arrays" in JS) list(python)            iterate over values
+- for..in loop      (for "Objects" in JS) dictionaries(python)               iterate over object keys
+- forEach loop      
+
+
+
+ForEach loop syntax:
+array.forEach(function (element, index , array) {                 //(index, array) are optional
+    //code  
+});
+
+(or)
+
+array.forEach(element => {         //short-hand
+    //code
+});
+
+
+
+
+
+-Code - controlConstructs.js 
+    
+

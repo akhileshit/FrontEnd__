@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border: 5px solid red;
+    animation: anime1 10s infinite;  /* bind 'p' with anime1 defined*/
+    position:relative;
+    border-radius: 50px;
+    /* animation-direction: alternate; */
+}
+
+@keyframes anime1 { /*Animation named anime1 defined*/
+    /* from {  
+        background-color: black;
+    }
+    to {
+        background-color: yellow;
+    } */
+
+    0% {
+        background-color: black;
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg); 
+    }
+    25% {
+        background-color: red;
+        left: 500px;
+        top: 0px;
+        transform: rotate(-180deg);  /* meaning: 25% al iddaga -180 deg rili irbeku*/
+    }
+    50% {
+        background-color: green;
+        left: 500px;
+        top: 520px;
+        transform: rotate(0deg);
+    }
+    75% {
+        background-color: blue;
+        left: 0px;
+        top: 520px;
+        transform: rotate(-180deg);
+    }
+    100% {
+        background-color: black;
+        left: 0px;
+        top: 0px;
+        transform: rotate(-360deg);
+    }
+    
+}

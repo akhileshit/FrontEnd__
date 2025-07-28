@@ -1,0 +1,97 @@
+28/11/2024 
+
+kod title: Comprehensive guide to javascript events with addEventListener
+
+
+
+
+Assignment: told to take 2 numbers input from the user and show their sum 
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom06 & dom07 
+        dom08 Assig
+  
+=======================================================================================================================================
+29/11/24
+
+kod title: Higher Order Functions and Callback Functions 
+           Closures in JavaScript     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom09-13
+        
+=======================================================================================================================================
+02/12/24
+
+kod title: Understanding Synchronous & ASynchronous Programming in JavaScript
+           Exception Handling in JavaScript & some prereq for promises (callback-hell)
+
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom14-19
+        
+=======================================================================================================================================
+03/12/24
+
+kod title: Understanding Promises
+           Form validation in JavaScript
+           Didn't teach "Understanding Async and Await "  (told to be covered in react)
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom20-23
+        
+=======================================================================================================================================
+04/12/24
+
+kod title: Form validation in JavaScript
+           React JS an Overview
+           Setting up a React Project
+
+
+
+
+
+
+
+
+
+
+
+
+-Code - REACT/demo
+
+
+//DO NOT FORGET TO GO THROUGH KOD-LEARN AND QUESTIONS-TAB(MORE IMPORTANTLY) WHILE REVISING.

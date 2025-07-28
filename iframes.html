@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>These are iframes</h1>
+
+    <iframe src="https://kodnest.com/" height="500" width="600" frameborder="0" scrolling=""></iframe>
+
+    <br>
+    <br>
+
+    <iframe srcdoc="<a href=https://www.kodnest.com target=_self > Click Here </a>" frameborder="1"></iframe>  <!-- "srcdoc" to specify your own document--> 
+    
+    <iframe srcdoc="<a href=https://www.kodnest.com target=_top > Click Here </a>" frameborder="1"></iframe>  <!-- target to specify topmost parent name-->
+
+    <iframe srcdoc="<a href=https://www.kodnest.com target=ifr1 > Click Here </a>" frameborder="1"></iframe>  <!-- target to specify another frame name-->
+    
+    <iframe name="ifr1" frameborder="1"></iframe>
+
+    <br>
+    <br>
+
+    <!-- experiment -->
+
+    <iframe srcdoc="
+                    <iframe srcdoc='<a href=https://www.kodnest.com target=_parent> Click Here </a>' frameborder=1> </iframe>"
+                    frameborder="1" width="600" height="500"></iframe>  <!-- nested frame --> <!-- target to specify parent -->
+
+    <!--    Remember: Quotes('' and "") makes the Difference     -->
+
+</body>
+</html>

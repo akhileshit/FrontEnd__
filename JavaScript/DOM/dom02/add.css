@@ -1,0 +1,12 @@
+
+button {
+    padding: 20px;
+    width: 200px;
+    margin-top: 50px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}

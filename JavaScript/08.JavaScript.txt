@@ -1,0 +1,166 @@
+21/11/2024 
+
+"Inside JavaScript: Concepts that Matter"
+Function Execution and Hoisting:
+
+- There is something called as "GLOBAL EXECUTION CONTEXT" or "EXECUTION CONTEXT" & it will be in the Stack.   (similar to Stack Frame & Activation Record concept in java)
+
+- The variable definition keywords like (var, let, const) will have different execution contexts.
+
+- var variables are 'hoisted'. but initialized as "undefined"    if accessed before declaring
+- let & const variables are 'hoisted', but they are placed in "Temporal Dead Zone"(TDZ), hence       gives error : "ReferrenceError: Cannot access 'b' before initialization".
+- variables declared without any keywords, if accessed before declaring (hoisting)          gives error : "ReferenceError: c is not defined".
+
+
+JavaScript Execution:
+- has 2 main phases
+  1. Memory Allocation phase       : JavaScript allocates memory for variables and functions within the 'global execution context', preparing them for use.
+  2. Code Execution phase       : JavaScript runs the code line by like 
+
+- An Execution context will have 'memory' & 'code' segments     [memory | code]
+- All variable names and (function-names + its complete content inside) will be captured and stored in the memory segment --> "Memory Allocation Phase" 
+- Remember: here function means 'Function Declarations'. not Function Expressions or Arrow Functions!!
+- hence functions(function declarations) are always ready for use anywhere in the code.   But they are executed only when they are called, otherwise untouched in the memeory
+- All variables already captured will be assigned a value(which is after '=' operator) --> "Code Execution phase"
+- Where variables declared with var will be updated from 'undefined' to specified value.
+- variables declared with let or const will come out of TDZ and gets the specified value.
+
+- Each functions declared(with different names ofcourse) will have its own "Execution context"[memory | code] assigned where all its variables are stored.
+- Once a function execution finishes when they are called, the 'Execution context of that function' will be deleted.    (remembering activation record?! )
+
+- Each functions will have its own "Execution Context"(like Stack Frame), all inside stack.
+- At the bottom of the stack "Global Execution Context" will be present.
+
+Note:
+- Statements like console.log are skipped in during 'memory Allocation phase', since no need to allocate any memory for them.
+- They directly are executed in 'code execution phase'
+
+==================
+
+Function Overloading in JS:
+- Function Overloading is not possible in JavaScript!!!!.
+
+- Reason: Becaz remember while giving the memory to the functions only their "names" are captured + their content inside curly braces. So JS doesn't/cannot differentiate the function with same names and different parameters (it just overwrites the functions content to the last one written!).
+
+- "There is always a way"   (actually 2 ways!)
+1. "arguments" object            : implicitly present inside the function, which can store any number of parameters. It is not an array but has length and index
+2. Spread Operator  (...args)       : explicitly we hv to specify in place parameter (...args) which is actually an array.
+
+
+
+
+-Code - funcExecution&Hoisting Folder  with 3 diagrams in it
+  
+=======================================================================================================================================
+
+22/11/2024 
+
+Scope of Variables & Lexical Environment:
+(As usual)
+- Global Scope               outside any functions
+- Local Scope               inside a function
+- Block Scope               inside any blocks     {}
+
+Lexical Environment: A structure that JS uses to keep track of variables and their relationships in the code.
+- It consists of:
+    -Local Memory           : stores variables and functions defined in the current execution context.
+    -Reference to Parent Environment            : enables functions to access variables in its parent scope forming a scope-chain.
+
+How JS finds variables?
+- 1st look in local memory
+- If not found checks the parent,gp...
+- If not found even there, it goes to global scope
+- If not found anywhere, gives ReferenceError
+
+- This is a Trivial concept, but with fancy terms!!
+
+
+
+
+-Code - VariableScope&LexicalEnv.js
+  
+=======================================================================================================================================
+
+25/11/2024 
+
+OBJECT ORIENTED PROGRAMMING IN JavaScript:
+- CLASS     : Blueprint/Template to create an object.
+- OBJECT     :  An instance of a class.
+
+- "class" keyword is used to define a class as usual.
+- initialize variables inside constructor
+- Do not use "function" keyword for methods inside a class !
+- use "this" keyword to access attributes or methods 'inside' the class.
+
+- use syntax "const vehicle = new Vehicle();"  for creating the objects.
+
+
+Constructor in JavaScript :
+- for initializing the instance variables while creating the object.
+-  "consturctor" keyword is used to create a Constructor.
+- JS automatically provides Default Constructor if not defined.  same as java
+
+
+
+INHERITANCE in JavaScript :
+- "extends" keyword is used to inherit from other class.
+- constructor chaining happens in JS similar to java using "super()" 
+- "super()" is must inside any child constructor. else will give error!.  By default it is not present if we 'explicitly' write the consturctor.
+- super() need not be the 1st line of constructor.
+
+- use "super" keyword to call the parent method.
+
+- code-reusability, better organization, & Flexibility
+
+
+
+POLYMORPHISM in JavaScript :
+- 1 Statement many behaviour.
+- write a method by 'passing different reference variable' of different classes to unlock polymorphism.
+
+
+
+
+-Code - OOPS (3-files)
+  
+=======================================================================================================================================
+
+26/11/2024 
+
+DOM (Document Object Model)
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom01 Folder (3-files)
+  
+=======================================================================================================================================
+
+27/11/2024 
+
+
+
+
+
+Assignment: told to do to-do list using "add & remove elements " functionality of DOM
+
+
+
+
+
+
+
+
+
+
+-Code - DOM/dom02, dom03 & dom04 Folder 
+      - dom05 Assig

@@ -1,0 +1,134 @@
+10/09/2024
+
+Headings:
+<h1> to <h6>
+
+Assg:
+Wrote about OOPS using many formatted tags like b, strong, small, big, em, i, sub, sup, pre, h1 to h6, mark, u, strike , hr
+-Code - Assig.html
+
+=======================================================================================================================================
+
+13/09/2024
+
+<div> tag: 
+- block level container used to divide or structure the page layout. Often used with CSS.
+
+Anchor Tags: "<a>"
+- Used to add hyperlinks in the page
+- It means to create a link to another web page or to resources(download link) or to sections inside same page.
+
+- <a href="">click here</a>
+
+- only tag a is not sufficient
+- use "attribute" href to tell on what page it should go after clicking.
+- href - hyper(External) Reference
+- that reference can be any link of websites or pages or even files inside localhost(.html,..)  or even "be on same page"
+
+ex: <a href="page2.html">click here</a>     --------> go to page2.html on localhost
+ex: <a href="https://kodnest.com">click here</a>     --------> go to kodnest.com website
+ex: <a href="#">click here</a>      --------> same page
+
+
+2 types of hyperlinks: hypertext and hyperimages
+
+=======================================================================================================================================
+
+16/09/2024
+
+"target" Attribute:
+
+- <a href="#" target="_blank">click here</a> <br/>
+
+- target can be _blank(new tab), _self(same tab) and many more maybe...  _parent, _top , any iframe name
+- _self is default
+- _self, _parent, _top looks same, but they say its different!! (research on it)
+- maybe the other two in the context of frames which are deprecated....
+
+<br/> is a "singleton tag" - no closing needed(self-closing tags) . Breaks the line and starts new element content in new line.
+- Usually used with "inline" elements like <a> anchor..
+
+=======================================================================================================================================
+
+03/10/2024 !!
+
+Note:
+- HTML5 targetted mainly on mobile devices and multimedia.
+
+<img /> tag :
+- <img src="" alt="" height="" width="" />
+- in 'src' specify image file path : 
+    -url of an image
+    -Local image file path
+- alt => Alternative text (To describe the image if it cannot be loaded)
+- By Default height and width values take values in pixels.
+- To make Hyperimage, put image inside anchor tag
+- singleton tag
+
+<video> tag :
+- <video src="" controls muted loop height="300" width="500" autoplay poster="img1.jpg"></video>
+- "controls" is must since it shows(visible) all controls of video.
+- "poster" acts as thumbnail to the video.
+- "autoplay" works in old html and depends on browser. Many browsers expect "muted" attribute alongside "autoplay"
+- "muted" to ensure the video starts without sound.
+- "loop" to automatically replay after finished.
+
+<audio> tag :
+- <audio src="" controls muted loop autoplay ></audio>
+- "controls" is must since it shows all controls of audio.
+- "autoplay" works in old html and depends on browser.
+- "muted" to ensure the audio starts without sound.
+- No width and height for audio.
+
+
+research on :
+1. <source> :
+
+
+2. <embed /> tag : 
+- <embed type="image/jpg" src="" width="300" height="200">
+- It's a deprecated tag 
+- defines a container for an external resource, such as a web page, a picture, a media player, or a plug-in application.
+- "type" specify any mime type like video/mp4....
+- It is best to use <video> <audio> tags seperately
+
+
+-Code - multimedia.html
+
+=======================================================================================================================================
+
+04/10/2024 
+
+<iframe> tag : 
+- <iframe src="https://kodnest.com/" height="500" width="600" frameborder="0" scrolling=""></iframe>
+- Inline frame
+- Embed another html document within your webpage, without having to redirect users to another website.
+- A window to show ads, videos and other web resources
+
+* Remember target attribute values like _self, _top, _parent, any iframe name? you will know the differnce now!
+
+- "frameborder" values "1"(Default) or "0" to make border visible 
+- "scrolling" values "yes"(Default) or "no" to make scroll visible
+- "src" attribute for external link or resources (url of the content to be displayed in iframe)
+- " srcdoc="" "  attribute to specify your own html document/code
+- "name" attribute to name the frame. Especially while specifying "target" 
+- "allowfullscreen." attribute maybe for video sources
+
+- Remember: Quotes makes Difference especially while using "srcdoc" in iframes
+
+
+-Code - iframes.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+

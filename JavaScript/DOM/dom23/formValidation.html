@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+</head>
+<body>
+
+    <form action="#">
+        <label for="username">Username: 
+            <input type="text" id="username" name="username" required pattern="^(?=^[A-Za-z])[A-Za-z0-9]{5,10}$"> <!--pattern: Alphanumeric starting with alpha with total length 5-10-->
+        </label>
+        <br> <br>
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required pattern="^[A-Za-z]+[A-Za-z0-9._\-]+@[A-Za-z]+\.[A-Za-z]{2,}$" minlength="5" maxlength="16"> <!-- start with alpha followed-by alpha/digits/symbols(-_.) fb @ fb alpha. min=5, max=16-->
+        </label>
+        <br> <br>
+        <label for="password">Password:
+            <input type="password" id="password" name="password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{6,12}$" oninvalid="this.setCustomValidity('Password format: length min-6 & max-12 characters, atleast 1 upperCase(A-Z), atleast 1 lowerCase(a-z) and atleast 1 number(0-9)')">
+        </label>
+        <br> <br>
+        <input type="submit" id="submit" value="Sign Up">
+    </form>
+    
+    <script src="formValidation.js"></script>
+</body>
+</html>

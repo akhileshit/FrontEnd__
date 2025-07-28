@@ -1,0 +1,160 @@
+23/10/2024
+
+Some more Pseudo-Classes in CSS:
+- :nth-child(n)      select nth child of parent element
+- :nth-of-type(n)      select nth child of specified type
+- :nth-last-child(n)        select last child of parent element
+- :nth-last-of-type(n)    select last child of specified type
+- :only-child      
+- :first-child
+- :last-child
+- :not(selector)      select all ele that donot match specified selector
+- :active         styles an ele when it is activated (link/button clicked&hold)
+- :visited      styles links already visited
+
+- (n)   accepts number,keyword,formula like(2, 5, 2n, 2+3, odd, even,...) 
+- CATCH here is :      'space' makes difference in all of pseudo-classes which selects using position        (nth-child(), nth-of-type(), nth-last-child(), only-child, first-child, also not(),.....)
+- ex1: div :nth-child(2) ---> div's 2nd child   (with space)
+- ex2: div:nth-of-type(2) ---> div as 2nd child  (w/o space)      crazy right?!!!
+
+
+Some more properties of CSS:
+- border-collapse    (collapse)
+- 
+
+
+
+-Code - selectors2.html, selstyle2.css
+
+=======================================================================================================================================
+
+24/10/2024 
+
+
+Some more Pseudo-Classes in CSS:
+- :checked    styles form elements like 'checkbox','radio' <input/> type when it is checked.  Ex: input:checked + label {} ----> styles the label adjacent/associated with input
+- :enabled      styles form elements when it is enabled
+- :disabled    styles form elements when it is disabled
+
+
+Pseudo-Elements in CSS :
+- what are elements? : a container along with its content right??
+- Pseudo-Elements are the special keywords in CSS that allow you to target and style specific parts of an html element. 
+- They let you add text, style certain lines or letters, and more ----> " all without changing the original html structure "!!!!!
+
+adv:
+- enhance UX   - adding decorative line before "each" heading/paragraph can guide readers eyes
+- keeps html clean
+- Easy styling
+
+
+Pseudo-Elements :
+- ::before      adds content before an element selected  Ex: p::before { } ---> adds specified content before each paragraphs
+- ::after      adds content after an element selected
+- ::first-line      styles the first line of the selected text block
+- ::first-letter      styles the first line of the selected text block
+- ::placeholder      styles the placeholder text of an input field 
+- ::selection       styles the part of a specified element which is selected (through cursor)
+- ::marker        styles the markers(bullets) of list-items
+
+
+
+
+Research Assignment:   "em"  in properties like font-size 1.5em 4em ....
+
+
+Some more CSS properties:
+- border-radius    (5px)
+
+
+
+
+-Code - selectors3.html, selstyle3.css
+
+=======================================================================================================================================
+
+25/10/2024 
+
+Box-Model :       Very important Concept in CSS
+  Height&Width of the content
+  Padding        internal space b/w content and border
+  Border 
+  Margin        separates b/w elements or body/document & elements. it is used create breathing-room b/w elements 
+
+- These 4 components makes the box Model
+- To see it in the browser for any website or your code, right click on the element you want to see the box-model for and 'inspect' or else you'll get wrong elements box-model or the body/documents box-model !!  BE CAREFUL
+
+
+    height: 40px;
+    width: 60px;
+
+    /* padding-top: 20px;
+    padding-right: 25px;
+    padding-bottom: 35px;
+    padding-left: 50px; */
+                                (or)
+
+    padding: 20px 25px 35px 50px;    /* like "clockwise" -----top-right-bottom-left------ */
+
+    /* padding: 20px; */      /* all sides 20px */
+    /* padding: 20px 25px; */      /* top&bottom 20px, right&left 25px */
+    /* padding: 20px 25px 35px; */      /* top 20px, right&left 25px, bottom 35px */
+
+    /* ///ly like padding for margin */
+    margin: 20px 35px 45px 60px;
+
+    border: 25px solid red;
+
+- padding and margin can for all 4 sides can be written with 4 properties (or) 1 property!! only
+- margin can have negative value but padding cannot (think logically)
+- look at this box model in browser by inspecting or using developer tools, it looks beautifully with our customized properties like margin, border, padding & height&width
+
+- if you  anytime get stuck or frustrated by the misalignment of your elements Remember box model and use it to crack it........
+
+
+
+
+-Code - boxmodel.html, boxmodel.css
+
+=======================================================================================================================================
+
+29/10/2024 
+
+FlexBox :
+Flexible Box Layout to arrange elements "inside" container/box.
+
+- "Aligning elements is no more a difficult task"
+
+FlexBox properties:
+- display         display: flex; "Activates" flexbox on the container.     [flex, inline-flex]
+- flex-grow         defines how much a flex item shd grow to fill the available space relative to other items.    [give numbers]   it completely fills the space available(horizontally)
+- flex-shrink           defines how much a flex item shd shrink if space is less. 0 => no shrink.      [give numbers]
+- flex-basis         sets the initial size for the flex item before the space is distributed.       [size or auto]
+- justify-content           controls horizontal alignment of the items in container (more specifically along its CURRENT-axis).    [center, flex-start, flex-end, space-around, space-between, space-evenly]
+- flex-direction    sets direction of the flex items.        [row, column, row-reverse, column reverse]
+
+
+- flex-grow, shrink, basis are applied to 'single item' in the container
+- all these three can be combined into single property          i.e.,   "flex: 1 1 auto"
+
+
+
+
+-Code - flex.html, flex.css
+
+=======================================================================================================================================
+
+04/11/2024 
+
+
+Some more FlexBox properties:
+- align-items          controls vertical alignment of the items in container (more specifically along its CROSS-axis).    [center, flex-start, flex-end, stretch, baseline]   
+- align-content             To align the contents with more than 1 line/row "when flex-wrap is enabled".      [center, flex-start, flex-end, stretch, space-between, space-around]
+- flex-wrap           defines whether the flex items should wrap if they don't fit in one line or sqeeze it in a single line(nowrap).      [wrap, nowrap(DEFAULT), wrap-reverse]
+- align-self            Overrides the align-items property for a specific item.
+- gap           adds uniform space between flex items.     [give numbers]
+- order           controls the order of items inside containers.    [give numbers]     default is 0 for all items
+
+
+- align-self and order applied to a 'single item'
+- since default for order is 0. if given -1 to any item it will go to top.
