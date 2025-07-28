@@ -1,6 +1,6 @@
-[submodule "Dummy"]
-	path = Dummy
-	url = https://github.com/akhileshit/git-dep-chk
 [submodule "JavaScript/REACT/login"]
 	path = JavaScript/REACT/login
 	url = https://github.com/akhileshit/login-react-demo
+[submodule "Dummy"]
+	path = Dummy
+	url = https://github.com/akhileshit/git-dep-chk
