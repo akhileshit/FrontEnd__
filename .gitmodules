@@ -1,6 +1,6 @@
 [submodule "JavaScript/REACT/login"]
 	path = JavaScript/REACT/login
-	url = https://github.com/akhileshit/login-react-demo
+	url = https://github.com/akhileshit/login-react-demo  # it's actual repo link
 [submodule "Dummy"]
 	path = Dummy
 	url = https://github.com/akhileshit/git-dep-chk

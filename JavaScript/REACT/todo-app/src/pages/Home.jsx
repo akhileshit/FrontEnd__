@@ -8,9 +8,7 @@ export default function Home() {
     ongoing: [],
     completed: []
   })
-  const [todoCount, setTodoCount] = useState(0)
-  const [ongoingCount, setOngoingCount] = useState(0)
-  const [doneCount, setDoneCount] = useState(0)
+
   const [editScreen, setEditScreen] = useState('')
   const [taskToEdit, setTaskToEdit] = useState('')
   const [editCategory, setEditCategory] = useState('')
@@ -23,7 +21,7 @@ export default function Home() {
         todo: [...prevTasklist.todo, task],
       })) // sets only todo by default
       setTask('') //Empty the input field after task is added to todo
-      setTodoCount(todoCount+1) // inc todo task count
+      
     }
   }
 
@@ -33,16 +31,7 @@ export default function Home() {
         (t) => t !== taskToMove
       ) // removes that task from the current list 
       const updatedTarget = [...prevTasklist[targetCategory], taskToMove] // adds that task to new category
-      
-      // dec currentCategory tasks count
-      if (currentCategory === 'todo') { setTodoCount(todoCount-1) }
-      else if (currentCategory === 'ongoing') { setOngoingCount(ongoingCount-1) }
-      else { setDoneCount(doneCount-1) }
-      // inc targetCategory tasks count  
-      if (targetCategory === 'todo') { setTodoCount(todoCount+1) }
-      else if (targetCategory === 'ongoing') { setOngoingCount(ongoingCount+1) }
-      else { setDoneCount(doneCount+1) }
-
+  
       return { ...prevTasklist, [currentCategory]: updateCurrent, [targetCategory]: updatedTarget } // returns the previous list with the updations
     })
 
@@ -54,9 +43,7 @@ export default function Home() {
       const removed = prevTasklist[currentCategory].filter(
         (t) => t !== task
       )
-      if (currentCategory === 'todo') { setTodoCount(todoCount-1) }
-      else if (currentCategory === 'ongoing') { setOngoingCount(ongoingCount-1) }
-      else { setDoneCount(doneCount-1) }     
+         
       return { ...prevTasklist, [currentCategory]: removed }
     })
   }
@@ -64,9 +51,7 @@ export default function Home() {
   const removeAll = (currentCategory) => {
     setTasklist((prevTasklist) => {
       const removed = []
-      if (currentCategory === 'todo') { setTodoCount(0) }
-      else if (currentCategory === 'ongoing') { setOngoingCount(0) }
-      else { setDoneCount(0) }
+      
       return { ...prevTasklist, [currentCategory]: removed}
     })
   }
@@ -117,7 +102,7 @@ export default function Home() {
         <div className="task-section">
           <h2>
             To-Do Tasks
-            <span className='section-tasks-count'>: {todoCount}</span>
+            <span className='section-tasks-count'>: {tasklist.todo.length}</span>
           </h2>
           <ul>
             {tasklist.todo.map((t, index) => (
@@ -137,7 +122,7 @@ export default function Home() {
         <div className="task-section">
           <h2>
             Ongoing Tasks
-            <span className='section-tasks-count'>: {ongoingCount}</span>
+            <span className='section-tasks-count'>: {tasklist.ongoing.length}</span>
           </h2>
           <ul>
             {tasklist.ongoing.map((t, index) => (
@@ -157,7 +142,7 @@ export default function Home() {
         <div className="task-section">
           <h2>
             Completed Tasks
-            <span className='section-tasks-count'>: {doneCount}</span>
+            <span className='section-tasks-count'>: {tasklist.completed.length}</span>
           </h2>
           <ul>
             {tasklist.completed.map((t, index) => (
