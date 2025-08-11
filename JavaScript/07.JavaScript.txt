@@ -132,7 +132,7 @@ typeof() - function to get type.
 - number
 - string 
 - boolean 
-- object    dictionary in python is the object in JS! (apperance exactly same)
+- object            dictionary in python is the object in JS! (apperance exactly same)
 - array (special type of 'object')       list in python is the array in JS!  (apperance exactly same)
     Array.isArray() disinguishes "Arrays" instead of saying "object"
 
@@ -179,8 +179,8 @@ Control Constructs in JS :
 - continue
 (above ALL same as java)
 
-- for..of loop    (for "Arrays" in JS) list(python)            iterate over values
-- for..in loop      (for "Objects" in JS) dictionaries(python)               iterate over object keys
+- for..of loop               iterate over values
+- for..in loop                     iterate over object keys in objects. index in arrays!
 - forEach loop      
 
 

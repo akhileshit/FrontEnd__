@@ -1,0 +1,15 @@
+6
+ravi@protonmail.com HTML,html,HTML
+nina@protonmail.com CSS,css
+nina@gmail.com data,Ml
+arun@yahoo.com html,CSS,javascript
+vyas@yahoo.com django,spring,flask
+manoj@yahoo.com mysql,oracle,mongo
+3
+ken@abc.com JS,TS,JS
+jen@abc.com TS,Node
+ben@xyz.com TS,JS
+3
+tony@aol.com DevOps,Cloud
+steve@icloud.com Security,Cloud
+bruce@aol.com cloud,devops

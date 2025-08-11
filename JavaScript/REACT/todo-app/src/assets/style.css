@@ -61,8 +61,8 @@ body {
     border-radius: 10px;
     box-shadow: 3px 4px 10px -6px black;
     padding: 30px;
-    width: 420px;
-    font-size: 30px;
+    width: calc(100vw - 72vw);
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
 }
@@ -90,7 +90,7 @@ body {
 .task-name {
     list-style: none;
     background-color: #4545f1;
-    width: 280px;
+    width: calc(100vw - 82vw);
     border-radius: 5px;
     padding: 5px;
     color: white;
