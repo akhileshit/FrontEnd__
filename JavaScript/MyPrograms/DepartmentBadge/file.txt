@@ -1,0 +1,38 @@
+6
+Legal 4 case started
+LEGAL 3  contract signed
+Legal 2   met client 
+Sales 1 closed deal
+Sales 3  got lead 
+sales 2 follow up
+6
+OcTal 4 case started
+LEGAL 3  contract signed
+Legal 2   met client 
+Sales 1 closed deal
+Sales 3       got   lead 
+sales 2 follow up
+6
+Tech 5 server down
+Tech 4 SERVER    restored
+Ops 1  daily report   
+Ops 2    Night   Shift Log
+Tech 2 check  status 
+Ops 3  updated servers
+6
+IT 2   reboot
+IT 1  Login Failed  
+IT 5 updated
+IT 4  Patch Applied
+IT 3 monitor replaced
+IT 6 connected VPN
+6
+Support 6     replied to ticket
+Support 3       assigned case 
+Support 5 escalated  issue 
+Support 1 first contact
+Support 2     waiting
+Support 4 ticket closed
+
+
+//Code from Nvest-Solution

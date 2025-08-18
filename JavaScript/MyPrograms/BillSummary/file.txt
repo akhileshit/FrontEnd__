@@ -1,0 +1,26 @@
+5
+deepa cake 1 500
+Deepa pastry 1 300
+DEEPA coffee 1 100
+deepa tea 1 50
+deepa 0 1 100
+6
+raM laddu 2 30
+shyam jalebi 3 40
+Shyam rasgulla 2 60
+ram dosa 1 50
+Ram samosa -1 20
+ram chaat 2 25
+6
+raju dosa 2 50
+RAJU idli 3 30
+Rani tea 2 20
+rani coffee 2 30
+rani snack 1 40
+raju sambar 1 20
+3
+Tom pizza 1 300
+tom burger 1 -50
+tom fries 1 100
+
+// Code from Roxiler Systems
